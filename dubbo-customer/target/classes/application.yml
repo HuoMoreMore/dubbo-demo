@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: dubbo-customer
+server:
+  port: 9091
+dubbo:
+  application:
+    name: dubbo-customer
+  registry:
+    address: zookeeper://localhost:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    basePackages: com.dubbo.customer

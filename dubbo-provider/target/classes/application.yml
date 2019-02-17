@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: dubbo-provider
+server:
+  port: 9090
+dubbo:
+  application:
+    name: dubbo-provider
+  registry:
+    protocol: zookeeper
+    address: localhost:2181
+  protocol:     #协议配置，用于配置提供服务的协议信息，协议由提供方指定，消费方被动接受。
+    name: dubbo
+    port: 20881
+  scan:
+    basePackages: com.dubbo.demo.service
